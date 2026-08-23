@@ -20,12 +20,6 @@ Looprix is an Autonomous Code Review & Self-Healing Developer Platform designed 
 
 ---
 
-## Demonstration
-
-Watch Looprix in action. The dashboard features dynamic glassmorphism and real-time agent memory streams.
-
-![Looprix Demonstration](./public/demo.webp)
-
 ### UI Screenshots
 
 <div align="center">
