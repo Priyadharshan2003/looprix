@@ -1,4 +1,10 @@
-# Looprix Project Structure & Architecture
+<div align="center">
+  <img src="./public/banner.jpg" alt="Looprix Banner" width="100%" />
+</div>
+
+<br />
+
+# <img src="./public/logo.jpg" alt="Looprix Icon" width="40" height="40" style="vertical-align: text-bottom; margin-right: 10px;" /> Looprix Project Structure & Architecture
 
 **Single Source of Truth** for the Looprix project. This document covers all architecture, data flows, components, and integration details.
 
@@ -11,6 +17,21 @@ Looprix is an Autonomous Code Review & Self-Healing Developer Platform designed 
 1. **Feature 1 — Autonomous Self-Healing**: Detects code smells, security vulnerabilities (OWASP Top 10), and non-compliant patterns (SAP Clean Core) across ABAP, TypeScript, and Python. The system drafts patches, generates unit tests (achieving >80% coverage), and opens validated pull requests.
 2. **Feature 2 — Multi-Agent Orchestration**: Built on the Antigravity Agent Framework 2.0, utilizing a loop of specialized AI agents (Triage, Security, Clean Core, Performance, Refactoring, Test, and Validation) running in a 5-iteration retry cycle.
 3. **Feature 3 — Real-Time Developer Dashboard**: A centralized, modern interface (Vite + React) that provides executives and engineers with live insights, clean core scores, agent memory streams, and 1-click merge approvals for AI-generated pull requests.
+
+---
+
+## Demonstration
+
+Watch Looprix in action. The dashboard features dynamic glassmorphism and real-time agent memory streams.
+
+![Looprix Demonstration](./public/demo.webp)
+
+### UI Screenshots
+
+<div align="center">
+  <img src="./public/dashboard_light.png" alt="Light Mode Dashboard" width="49%" />
+  <img src="./public/dashboard_dark.png" alt="Dark Mode Clean Core" width="49%" />
+</div>
 
 ---
 
