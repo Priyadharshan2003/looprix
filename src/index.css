@@ -1,0 +1,247 @@
+@import "./styles/theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   NEO-BRUTALIST PREMIUM CARD SYSTEM
+   Large rounded corners + thick border + deep shadow
+   ═══════════════════════════════════════════════════ */
+
+.nb-card {
+  background-color: var(--card);
+  border: 3px solid var(--border-strong);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-card);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.nb-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 10px 10px 0px var(--border-strong);
+}
+
+.nb-card-static {
+  background-color: var(--card);
+  border: 3px solid var(--border-strong);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-card);
+}
+
+/* Legacy brutal-card — preserved for code diff viewer & terminal panels */
+.brutal-card {
+  background-color: var(--card);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-brutal);
+  border-radius: 12px;
+}
+
+/* ═══════════════════════════════════════════════════
+   BUTTON SYSTEM
+   ═══════════════════════════════════════════════════ */
+
+.nb-btn {
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-brutal-sm);
+  border-radius: var(--radius-btn);
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  transition: transform 150ms ease, box-shadow 150ms ease, outline 150ms ease;
+}
+
+.nb-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-brutal), 0 0 0 2px var(--background), 0 0 0 4px var(--foreground);
+}
+
+.nb-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.nb-btn:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 0px var(--border-strong);
+}
+
+.nb-btn-primary {
+  background-color: var(--brand-yellow);
+  color: var(--brand-yellow-foreground);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-brutal-sm);
+  border-radius: var(--radius-btn);
+  font-weight: 700;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.nb-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+/* Legacy brutal-btn — kept for compatibility */
+.brutal-btn {
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-brutal-sm);
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border-radius: var(--radius-btn);
+}
+
+.brutal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.brutal-btn:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 0px var(--border-strong);
+}
+
+/* ═══════════════════════════════════════════════════
+   AGENT CHIP — Online indicator with glow
+   ═══════════════════════════════════════════════════ */
+
+.agent-chip {
+  border-radius: 16px;
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-brutal-sm);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.agent-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.agent-chip.online {
+  box-shadow: var(--shadow-brutal-sm), 0 0 10px rgba(104, 212, 138, 0.4);
+}
+
+/* ═══════════════════════════════════════════════════
+   NAV ITEM
+   ═══════════════════════════════════════════════════ */
+
+.nb-nav-item {
+  border-radius: 14px;
+  border: 2px solid transparent;
+  transition: all 200ms ease;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.nb-nav-item:hover {
+  border-color: var(--border);
+  background-color: var(--secondary);
+}
+
+.nb-nav-item.active {
+  background-color: var(--brand-yellow);
+  color: var(--brand-yellow-foreground);
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+/* ═══════════════════════════════════════════════════
+   TIMELINE STEP (Agent Loop Flow)
+   ═══════════════════════════════════════════════════ */
+
+.timeline-step {
+  border-radius: 14px;
+  border: 2px solid var(--border);
+  transition: all 200ms ease;
+}
+
+.timeline-step.active {
+  border-color: var(--border-strong);
+  background-color: var(--brand-yellow);
+  color: var(--brand-yellow-foreground);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.timeline-step.completed {
+  border-color: var(--border-strong);
+  background-color: var(--color-green);
+  color: var(--accent-green-fg);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+/* ═══════════════════════════════════════════════════
+   PREMIUM SCROLLBAR
+   ═══════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 3px;
+  opacity: 0.6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+  opacity: 0.8;
+}
+
+::selection {
+  background-color: var(--brand-yellow);
+  color: var(--brand-yellow-foreground);
+}
+
+/* ═══════════════════════════════════════════════════
+   STAT CARD HOVER (KPI cards)
+   ═══════════════════════════════════════════════════ */
+
+.stat-card {
+  cursor: pointer;
+  border-radius: var(--radius-card);
+  border: 3px solid var(--border-strong);
+  box-shadow: var(--shadow-card);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 10px 10px 0px var(--border-strong);
+}

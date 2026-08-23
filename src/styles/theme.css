@@ -1,0 +1,200 @@
+:root {
+  /* ══════════════════════════════════════════════
+     LOOPRIX DESIGN SYSTEM — LIGHT MODE
+     Background: Warm Cream #FAF7F2
+  ══════════════════════════════════════════════ */
+
+  /* ── Premium Ink System ── */
+  --ink-primary: #1F2430;
+  --ink-secondary: #2B3245;
+  --ink-muted: #64748B;
+
+  --background: #faf7f2;
+  --foreground: var(--ink-primary);
+
+  --card: #ffffff;
+  --card-foreground: var(--ink-primary);
+  --card-elevated: #ffffff;
+
+  --secondary: #f4f4f4;
+  --secondary-foreground: #666666;
+
+  --muted: #e6e0d5;
+  --muted-foreground: #38342D;
+  --subtext: #524C42;
+
+  --border: #d8d3cb;
+  --border-strong: var(--ink-secondary);
+  
+  --input: #ffffff;
+  --input-border: #d8d3cb;
+
+  --primary: var(--ink-primary);
+  --primary-foreground: #ffffff;
+
+  --hero-bg: #243146;
+  --hero-fg: #FFFFFF;
+  --hero-muted: #CBD5E1;
+  --hero-border: #3D506D;
+
+  --accent: #FFD86A;
+  --accent-foreground: var(--ink-primary);
+
+  --destructive: #FF4444;
+  --destructive-foreground: #FFFFFF;
+
+  /* ── Brand Palette & Adaptive Contrast Pairs ── */
+  --brand-yellow: #FFD86A;
+  --brand-yellow-foreground: var(--ink-primary);
+  --brand-purple: #D9B8FF;
+  --brand-orange: #FFAE61;
+  --brand-green: #77DD99;
+  --brand-blue: #7AB7FF;
+  --brand-red: #FF8A8A;
+
+  --accent-orange-fg: var(--ink-primary);
+  --accent-green-fg: var(--ink-primary);
+  --accent-blue-fg: #ffffff;
+  --accent-red-fg: #ffffff;
+  --accent-purple-fg: #ffffff;
+  --accent-cyan-fg: var(--ink-primary);
+
+  /* ── Semantic Color Tokens ── */
+  --color-orange: #FFAE61;
+  --color-orange-bg: #FFF3E4;
+  --color-orange-text: #8C3E00;
+
+  --color-green: #77DD99;
+  --color-green-bg: #E6F9EE;
+  --color-green-text: #125C2B;
+
+  --color-blue: #7AB7FF;
+  --color-blue-bg: #E4F0FF;
+  --color-blue-text: #124794;
+
+  --color-red: #FF8A8A;
+  --color-red-bg: #FFE8E8;
+  --color-red-text: #991B1B;
+
+  --color-purple: #D9B8FF;
+  --color-purple-bg: #F3ECFF;
+  --color-purple-text: #581C87;
+
+  --color-cyan: #7FD8E0;
+  --color-cyan-bg: #E4F9FB;
+  --color-cyan-text: #0E5A68;
+
+  --color-yellow: #FFD86A;
+  --color-yellow-bg: #FFFAE4;
+  --color-yellow-text: #7A5200;
+
+  /* ── Shadow System (Soft Linear Style) ── */
+  --shadow-brutal-sm: 0 2px 8px rgba(31, 36, 48, 0.08);
+  --shadow-brutal: 0 4px 16px rgba(31, 36, 48, 0.12);
+  --shadow-brutal-lg: 0 8px 32px rgba(31, 36, 48, 0.16);
+  --shadow-card: 0 4px 24px rgba(31, 36, 48, 0.08);
+
+  /* ── Border Radius ── */
+  --radius-card: 20px;
+  --radius-btn: 12px;
+  --radius-pill: 999px;
+  --radius-chip: 10px;
+}
+
+.dark {
+  /* ══════════════════════════════════════════════
+     LOOPRIX DESIGN SYSTEM — DARK MODE
+     Premium dark — NOT hacker terminal
+  ══════════════════════════════════════════════ */
+
+  --background: #0B0F19;
+  --foreground: #fafafa;
+
+  --card: var(--ink-primary);
+  --card-foreground: #fafafa;
+  --card-elevated: var(--ink-secondary);
+
+  --secondary: #202124;
+  --secondary-foreground: #b8b8b8;
+
+  --muted: #202124;
+  --muted-foreground: #b8b8b8;
+  --subtext: #b8b8b8;
+
+  --border: #303236;
+  --border-strong: #fafafa;
+  
+  --input: var(--ink-primary);
+  --input-border: #303236;
+
+  --primary: #ffd86a;
+  --primary-foreground: var(--ink-primary);
+
+  --hero-bg: #243146;
+  --hero-fg: #FFFFFF;
+  --hero-muted: #CBD5E1;
+  --hero-border: #3D506D;
+
+  --accent: #FFD86A;
+  --accent-foreground: var(--ink-primary);
+
+  --destructive: #FF6B6B;
+  --destructive-foreground: var(--ink-primary);
+
+  /* ── Brand Palette (Dark — slightly adjusted for contrast) ── */
+  --brand-yellow: #FFD86A;
+  --brand-yellow-foreground: var(--ink-primary);
+  --brand-purple: #C4A0FF;
+  --brand-orange: #FFAE61;
+  --brand-green: #68D48A;
+  --brand-blue: #6AABFF;
+  --brand-red: #FF7575;
+
+  --accent-orange-fg: var(--ink-primary);
+  --accent-green-fg: var(--ink-primary);
+  --accent-blue-fg: var(--ink-primary);
+  --accent-red-fg: #ffffff;
+  --accent-purple-fg: var(--ink-primary);
+  --accent-cyan-fg: var(--ink-primary);
+
+  /* ── Semantic Color Tokens (Dark) ── */
+  --color-orange: #FFAE61;
+  --color-orange-bg: #3b2a1a;
+  --color-orange-text: #FFAE61;
+
+  --color-green: #68D48A;
+  --color-green-bg: #1c3324;
+  --color-green-text: #68D48A;
+
+  --color-blue: #6AABFF;
+  --color-blue-bg: #1c2b3f;
+  --color-blue-text: #6AABFF;
+
+  --color-red: #FF7575;
+  --color-red-bg: #3f2222;
+  --color-red-text: #FF7575;
+
+  --color-purple: #C4A0FF;
+  --color-purple-bg: #2e243f;
+  --color-purple-text: #C4A0FF;
+
+  --color-cyan: #6ACFE0;
+  --color-cyan-bg: #1d3237;
+  --color-cyan-text: #6ACFE0;
+
+  --color-yellow: #FFD86A;
+  --color-yellow-bg: #3b321e;
+  --color-yellow-text: #FFD86A;
+
+  /* ── Shadow System (Dark Mode Linear Soft) ── */
+  --shadow-brutal-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-brutal: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-brutal-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.5);
+
+  /* ── Border Radius ── */
+  --radius-card: 20px;
+  --radius-btn: 12px;
+  --radius-pill: 999px;
+  --radius-chip: 10px;
+}
